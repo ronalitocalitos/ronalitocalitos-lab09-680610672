@@ -227,7 +227,7 @@ router.delete('/',(req,res)=>{
 
       if(user.role === "STUDENT"){
         const {courseNo} = req.body;
-        const studentId = user_payload.studentId;
+        const studentId = user.studentId;
 
         if(!courseNo){
           return res.status(400).json({
